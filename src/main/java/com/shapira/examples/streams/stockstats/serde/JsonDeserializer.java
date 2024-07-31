@@ -21,6 +21,7 @@ public class JsonDeserializer<T> implements Deserializer<T> {
     @Override
     @SuppressWarnings("unchecked")
     public void configure(Map<String, ?> map, boolean b) {
+        // 这里用于自定义需要被反序列化的类的类型
         if(deserializedClass == null) {
             deserializedClass = (Class<T>) map.get("serializedClass");
         }
